@@ -58,7 +58,7 @@ def resumen_por_sucursal(df):
                 totuni  += df.loc[i, "PRCANT"]
                 totimpor += df.loc[i, "PRIMPORTE"]
                 i += 1
-            totsuc += totuni
+            totsuc -= totuni
             if myimpor == 0 or totimpor > myimpor:
                 myimpor, myprod = totimpor, producto
             if mnimpor is None or totimpor < mnimpor:
